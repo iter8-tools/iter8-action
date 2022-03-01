@@ -1,5 +1,7 @@
 # iter8-action
 
+## :zap: Iter8: Kubernetes Release Optimizer
+
 > - Safely rollout apps
 > - Maximize business value
 > - Use with any app/serverless/ML framework
