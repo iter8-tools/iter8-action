@@ -1,6 +1,6 @@
 name: 'Run Iter8 Experiment'
 description: 'Run an Iter8 experiment'
-author: Iter8
+author: Michael Kalantar
 inputs:
   chart:
     description: 'Experiment chart.'
@@ -22,7 +22,7 @@ inputs:
     default: 'Info'
 runs:
   using: 'docker'
-  image: 'action/Dockerfile'
+  image: 'Dockerfile'
 branding:
   icon: check-circle
   color: green

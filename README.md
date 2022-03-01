@@ -15,7 +15,7 @@ Configure experiment with Helm values file and run the experiment:
             http/error-rate: 0
             http/mean-latency: 100
         EOF
-    - uses: iter8-tools/iter8@v0.9
+    - uses: iter8-tools/iter8-action@v0.9
       with:
         chart: load-test-http
         valuesFile: expConfig.yaml
