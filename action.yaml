@@ -3,23 +3,26 @@ description: 'Run an Iter8 experiment'
 author: Michael Kalantar
 inputs:
   chart:
-    description: 'Experiment chart.'
+    description: 'Name of experiment chart.'
     required: true
+  chartRepo:
+    description: 'URL of experiment chart repository.'
+    required: false
   valuesFile:
     description: 'Path to file of configuration values.'
     required: false
   validateSLOs:
-    description: 'Fail if SLOs fail'
+    description: 'Should validate specified SLOs.'
     required: false
     default: 'true'
   chartVersion:
-    description: 'Version constrain for chart'
+    description: 'Version constraint for chart'
     required: false
     default: ''
   logLevel:
-    description: 'Logging level; valid values are trace, debug, info (default), warning, error, fatal'
+    description: 'Logging level; valid values are trace, debug, info (default), warning, error, fatal, panic'
     required: false
-    default: 'Info'
+    default: 'info'
 runs:
   using: 'docker'
   image: 'Dockerfile'

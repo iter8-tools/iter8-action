@@ -27,8 +27,9 @@ For more information, see [Iter8 documentation](https://iter8.tools/0.9).
 
 | Input Name | Description | Default |
 | ---------- | ----------- | ------- |
-| `chart` | Experiment chart. Required. | None |
+| `chart` | Name of the experiment chart. Required. | None |
+| `chartRepo` | URL of experiment chart repo. | `https://iter8-tools.github.io/hub` |
 | `valuesFile` | Path to configuration values file. | None |
 | `validateSLOs` | Validate any specified SLOs. | `true` |
-| `chartVersion` | Chart version constraint | None |
-| `logLevel` | Logging level; valid values are `trace`, `debug`, `info`, `warning`, `error`, `fatal` | `info` |
+| `chartVersion` | Version constraint for the chart | None |
+| `logLevel` | Logging level; valid values are `trace`, `debug`, `info`, `warning`, `error`, `fatal`, `panic` | `info` |

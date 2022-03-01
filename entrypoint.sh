@@ -21,15 +21,21 @@ if [[ ! -z "${INPUT_LOGLEVEL}" ]]; then
   LOGLEVEL="$LOGLEVEL -l ${INPUT_LOGLEVEL}"
 fi
 
-echo "Identify values file"
 OPTIONS=""
-if [[ ! -z "${INPUT_VALUESFILE}" ]]; then
-  OPTIONS="$OPTIONS -f ${INPUT_VALUESFILE}"
+
+echo "Identify chart repository"
+if [[ ! -z "${INPUT_CHARTREPO}" ]]; then
+  OPTIONS="$OPTIONS -r ${INPUT_CHARTREPO}"
 fi
 
 echo "Identify any chartVersionConstraint file"
 if [[ ! -z "${INPUT_CHARTVERSION}" ]]; then
   OPTIONS="$OPTIONS -v ${INPUT_CHARTVERSION}"
+fi
+
+echo "Identify values file"
+if [[ ! -z "${INPUT_VALUESFILE}" ]]; then
+  OPTIONS="$OPTIONS -f ${INPUT_VALUESFILE}"
 fi
 
 echo "Calling: $ITER8 launch -c ${INPUT_CHART} ${OPTIONS} ${LOGLEVEL}"
