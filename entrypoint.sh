@@ -15,6 +15,9 @@ fi
 
 # no need to cleanup
 
+echo "Verify version of Iter8"
+$ITER8 version
+
 echo "Identify loglevel if set"
 LOGLEVEL=""
 if [[ ! -z "${INPUT_LOGLEVEL}" ]]; then
