@@ -38,6 +38,10 @@ if [[ ! -z "${INPUT_VALUESFILE}" ]]; then
   OPTIONS="$OPTIONS -f ${INPUT_VALUESFILE}"
 fi
 
+echo "Calling: $ITER8 launch -c ${INPUT_CHART} ${OPTIONS} ${LOGLEVEL} --dry"
+$ITER8 launch -c ${INPUT_CHART} ${OPTIONS} ${LOGLEVEL} --dry
+cat experiment.yaml
+
 echo "Calling: $ITER8 launch -c ${INPUT_CHART} ${OPTIONS} ${LOGLEVEL}"
 $ITER8 launch -c ${INPUT_CHART} ${OPTIONS} ${LOGLEVEL}
 
