@@ -13,9 +13,10 @@ if [[ ! "$WORK_DIR" || ! -d  "$WORK_DIR" ]]; then
   exit 1
 fi
 
-cd ${WORK_DIR}
+pushd ${WORK_DIR}
 wget https://github.com/iter8-tools/iter8/releases/download/v0.9.0/iter8-linux-amd64.tar.gz
 tar -xvf iter8-linux-amd64.tar.gz
+popd
 ITER8="${WORK_DIR}/linux-amd64/iter8"
 
 echo "Verify version of Iter8"
