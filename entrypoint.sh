@@ -3,21 +3,28 @@
 set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ITER8="/bin/iter8"
+# ITER8="/bin/iter8"
 
-echo "Creating working directory"
+# echo "Creating working directory"
 
-WORK_DIR=`mktemp -d -p  "$DIR"`
-if [[ ! "$WORK_DIR" || ! -d  "$WORK_DIR" ]]; then
-  echo "Cound not create temporary working directory"
-  exit 1
-fi
+# WORK_DIR=`mktemp -d -p  "$DIR"`
+# if [[ ! "$WORK_DIR" || ! -d  "$WORK_DIR" ]]; then
+#   echo "Cound not create temporary working directory"
+#   exit 1
+# fi
 
-pushd ${WORK_DIR}
+# pushd ${WORK_DIR}
+# wget https://github.com/iter8-tools/iter8/releases/download/v0.9.2/iter8-linux-amd64.tar.gz
+# tar -xvf iter8-linux-amd64.tar.gz
+# popd
+# ITER8="${WORK_DIR}/linux-amd64/iter8"
+ 
+ 
 wget https://github.com/iter8-tools/iter8/releases/download/v0.9.2/iter8-linux-amd64.tar.gz
 tar -xvf iter8-linux-amd64.tar.gz
-popd
-ITER8="${WORK_DIR}/linux-amd64/iter8"
+mv linux-amd64/iter8 /usr/local/bin
+ITER8="/usr/local/bin/iter8"
+
 
 echo "Verify version of Iter8"
 $ITER8 version

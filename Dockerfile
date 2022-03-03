@@ -1,4 +1,4 @@
-FROM iter8/iter8:0.9.2
+FROM ubuntu
 
 RUN apt-get update && apt-get install -y wget
 
