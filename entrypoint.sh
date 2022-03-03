@@ -14,7 +14,7 @@ if [[ ! "$WORK_DIR" || ! -d  "$WORK_DIR" ]]; then
 fi
 
 pushd ${WORK_DIR}
-wget https://github.com/iter8-tools/iter8/releases/download/v0.9.0/iter8-linux-amd64.tar.gz
+wget https://github.com/iter8-tools/iter8/releases/download/v0.9.2/iter8-linux-amd64.tar.gz
 tar -xvf iter8-linux-amd64.tar.gz
 popd
 ITER8="${WORK_DIR}/linux-amd64/iter8"
