@@ -5,9 +5,6 @@ inputs:
   chart:
     description: 'Name of experiment chart.'
     required: true
-  chartRepo:
-    description: 'URL of experiment chart repository.'
-    required: false
   valuesFile:
     description: 'Path to file of configuration values.'
     required: false
@@ -15,14 +12,17 @@ inputs:
     description: 'Should validate specified SLOs.'
     required: false
     default: 'true'
-  chartVersion:
-    description: 'Version constraint for chart'
-    required: false
-    default: ''
   logLevel:
     description: 'Logging level; valid values are trace, debug, info (default), warning, error, fatal, panic'
     required: false
     default: 'info'
+  chartRepo:
+    description: 'URL of experiment chart repository. This is an advanced option meant to enable third party Iter8 experiment repos.'
+    required: false
+  chartVersion:
+    description: 'Version constraint for chart. This is an advanced option meant to pin down Iter8 chart versions.'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
