@@ -18,7 +18,7 @@ A sample `experiment-config.yaml` is shown below.
 url: https://httpbin.org/get
 ```
 
-Details of the configuration parameters that can be set in this experiment is [here](https://iter8.tools/0.9/tutorials/load-test-http/basicusage/).
+Details of the configuration parameters that can be set in this experiment are [here](https://iter8.tools/0.9/tutorials/load-test-http/basicusage/).
 
 ### Example: Load test, benchmark and validate gRPC
 ``` yaml
@@ -36,7 +36,7 @@ call: helloworld.Greeter.SayHello
 protoURL: https://raw.githubusercontent.com/grpc/grpc-go/master/examples/helloworld/helloworld/helloworld.proto
 ```
 
-Details of the configuration parameters that can be set in this experiment is [here](https://iter8.tools/0.9/tutorials/load-test-grpc/basicusage/).
+Details of the configuration parameters that can be set in this experiment are [here](https://iter8.tools/0.9/tutorials/load-test-grpc/basicusage/).
 
 
 ## Action Inputs
